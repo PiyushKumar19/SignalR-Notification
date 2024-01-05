@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.SignalR;
 using SignalR_Api.IRepository;
 using SignalR_Api.Models;
 
 namespace SignalR_Api.Repositories
 {
+    [Authorize]
     public class NotificationsHub : Hub<INotificationClient>
     {
         public async override Task OnConnectedAsync()

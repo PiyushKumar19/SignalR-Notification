@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.SignalR;
 using SignalR_Api.Repositories;
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR();
 builder.Services.AddHostedService<ServerTimeNotifier>();
 builder.Services.AddCors();
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -26,6 +29,8 @@ app.UseCors(policy => policy
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowAnyOrigin());
+
+app.UseAuthorization();
 
 app.UseHttpsRedirection();
 

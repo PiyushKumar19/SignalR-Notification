@@ -26,7 +26,9 @@ namespace SignalR_Api.Repositories
 
                 _logger.LogInformation("Executing {Service} {Time}", nameof(ServerTimeNotifier), dateTime);
 
-                _context.Clients.All.RecievedNotification($"Server Time = {dateTime}");
+                _context.Clients
+                    .User("58c4b5b6-37d4-4a5d-be66-b2ad8fa54d7c")
+                    .RecievedNotification($"Server Time = {dateTime}");
             }
         }
     }

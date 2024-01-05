@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "NotificationClient",
   "resources": {
-    "hash": "sha256-ExSWiKG50yQ/EdDWKcGhPRRdt0jeJ3+P+LU3MhIZsoA=",
+    "hash": "sha256-wlxzooQD9/EQR/6UtU312bsqOER9ZCa5RrHvGc5s8j8=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.gvmd8bs3t4.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -216,10 +216,10 @@
       "mscorlib.wasm": "sha256-cDuLeL3OCtVtiid/dyex1MVgbuzDSRwZxKzuP2Dp4mg=",
       "netstandard.wasm": "sha256-A0h86SDieTMoU/wU2JTszWCsUmMuguDcbap0b0BzsmI=",
       "System.Private.CoreLib.wasm": "sha256-/0DNIm/T0C07X7Tuz5uR8JvVCoAfEE2MnfPUSjyS9xc=",
-      "NotificationClient.wasm": "sha256-6k9bZEUa2jQnKvb1zbeLVAXJQarLv25Atjp+CpqSWXU="
+      "NotificationClient.wasm": "sha256-qa8JuPKkEtGHqmWRJkSoSFHARoZ/GRwK7SBYo8dIDCc="
     },
     "pdb": {
-      "NotificationClient.pdb": "sha256-0rp8O+646SrQH3ZytcSbMjCABXleaAi7alcFtcyEYDY="
+      "NotificationClient.pdb": "sha256-qmnaHs7238G2O1qjTMsT910xiGQn4Vo6KjsdSzTjkio="
     }
   },
   "cacheBootResources": true,

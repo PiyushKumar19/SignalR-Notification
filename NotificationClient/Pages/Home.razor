@@ -23,7 +23,8 @@ Messages from the server 👇
     protected override async Task OnInitializedAsync()
     {
         _hubConnection = new HubConnectionBuilder()
-            .WithUrl("https://localhost:7183/notifications")
+            .WithUrl("https://localhost:7183/notifications",
+            o => o.AccessTokenProvider = () => Task.FromResult<string?>("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjU4YzRiNWI2LTM3ZDQtNGE1ZC1iZTY2LWIyYWQ4ZmE1NGQ3YyIsInN1YiI6IjU4YzRiNWI2LTM3ZDQtNGE1ZC1iZTY2LWIyYWQ4ZmE1NGQ3YyIsImp0aSI6Ijc4MzQxMjdmIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6MjQ2NjYiLCJodHRwczovL2xvY2FsaG9zdDo0NDM2MyIsImh0dHA6Ly9sb2NhbGhvc3Q6NTAxMyIsImh0dHBzOi8vbG9jYWxob3N0OjcxODMiXSwibmJmIjoxNzA0NDUxOTY5LCJleHAiOjE3MTIzMTQzNjksImlhdCI6MTcwNDQ1MTk3MCwiaXNzIjoiZG90bmV0LXVzZXItand0cyJ9.Yf4edEYN-4mZo5Y_HD6KUQbkRtPR3pMjTu1VOtL3rBU"))
             .Build();
 
         _hubConnection.On<string>("RecievedNotification", message =>
